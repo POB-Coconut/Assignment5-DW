@@ -1,31 +1,3 @@
-function solution(input) {
-  const output = {
-    ㄱ: 0,
-    ㄴ: 0,
-    ㄷ: 0,
-    ㄹ: 0,
-    ㅁ: 0,
-    ㅂ: 0,
-    ㅅ: 0,
-    ㅇ: 0,
-    ㅈ: 0,
-    ㅊ: 0,
-    ㅋ: 0,
-    ㅌ: 0,
-    ㅍ: 0,
-    ㅎ: 0,
-  };
-
-  const oneLetterArr = input.split("");
-
-  oneLetterArr.forEach((oneLetter) => {
-    output[getChosung(oneLetter)]++;
-  });
-
-  console.log(output);
-  return output;
-}
-
 function getChosung(oneLetter) {
   const chosung = [
     "ㄱ",
@@ -57,6 +29,34 @@ function getChosung(oneLetter) {
   let chosungIndex = parseInt(korUniCode / 588);
 
   return chosung[chosungIndex];
+}
+
+function solution(input) {
+  const output = {
+    ㄱ: 0,
+    ㄴ: 0,
+    ㄷ: 0,
+    ㄹ: 0,
+    ㅁ: 0,
+    ㅂ: 0,
+    ㅅ: 0,
+    ㅇ: 0,
+    ㅈ: 0,
+    ㅊ: 0,
+    ㅋ: 0,
+    ㅌ: 0,
+    ㅍ: 0,
+    ㅎ: 0,
+  };
+
+  const oneLetterArr = input.split("");
+
+  oneLetterArr.forEach((oneLetter) => {
+    output[getChosung(oneLetter)]++;
+  });
+
+  console.log(output);
+  return output;
 }
 
 const input = "사과1호랑이,고니 수박BT닭";
